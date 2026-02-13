@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoAZAV - Vom Dokumentations-Stress zur Audit-Routine</title>
+    <meta name="description" content="KI-gestützte AZAV-Dokumentation für Bildungsträger. Automatisieren Sie Ihre AZAV-Prozesse von der Anwesenheitsliste bis zum fertigen Audit. Rechtssicher, fehlerfrei und in Minuten statt Stunden." />
+    <link rel="stylesheet" href="../css/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.294.0/dist/umd/lucide.min.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "AutoAZAV",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "KI-gestützte AZAV-Dokumentation für Bildungsträger",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "127"
+      }
+    }
+    </script>
+  </head>
+<body class="font-inter bg-background text-text-primary">
+<!-- Navigation -->
+<nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl blur opacity-75"></div>
+                    <div class="relative bg-gradient-to-r from-[#0a0f1e] to-[#0f172a] px-6 py-3 rounded-xl flex items-center space-x-3 border border-white/10">
+                        <!-- Green Triangle Logo -->
+                        <img src="../assets/images/Gemini_Generated_Image_xdm7tvxdm7tvxdm7-removebg-preview-1770057793768.png" 
+                             alt="AutoAZAV Triangle" 
+                             class="h-8 w-auto object-contain brightness-110"
+                             style="filter: drop-shadow(0 0 8px rgba(34, 197, 94, 0.4));" />
+                        <!-- Text Logo -->
+                        <span class="text-2xl font-extrabold text-white tracking-tight">
+                            Auto<span class="text-[#22c55e]">AZAV</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <button class="bg-[#22c55e] hover:bg-[#16a34a] text-white font-semibold px-6 py-2.5 rounded-lg transition-all duration-200 shadow-lg shadow-[#22c55e]/30 hover:shadow-[#22c55e]/50 hover:scale-105 flex items-center">Analysegespräch buchen</button>
+            </div>
+            <button class="md:hidden p-2 text-gray-700" id="mobile-menu-btn">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] pt-20">
+    <!-- Geometric background patterns -->
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-20 left-10 w-64 h-64 border-2 border-white rounded-full"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 border-2 border-[#22c55e] rounded-full"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-white/20"></div>
+    </div>
+    
+    <div class="relative max-w-7xl mx-auto px-6 py-20 text-center z-10">
+        <!-- Badge -->
+        <div class="inline-flex items-center px-4 py-2 bg-[#22c55e]/10 border border-[#22c55e]/30 rounded-full mb-8">
+            <i data-lucide="sparkles" class="w-4 h-4 text-[#22c55e] mr-2"></i>
+            <span class="text-sm font-semibold text-[#22c55e]">KI-gestützte AZAV-Dokumentation</span>
+        </div>
+
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-8 leading-tight text-white">
+            Skalieren Sie Ihre Maßnahmen – <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#22c55e] to-[#16a34a]">nicht Ihre Verwaltung.</span>
+        </h1>
+        
+        <p class="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
+            Wachsen Sie als Bildungsträger, ohne neue Mitarbeiter für die Dokumentation einstellen zu müssen. AutoAZAV automatisiert Ihre Prozesse, damit Ihr Backoffice auch bei 500% mehr Teilnehmern entspannt bleibt.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+            <button class="bg-[#22c55e] hover:bg-[#16a34a] text-white font-bold px-8 py-4 rounded-lg transition-all duration-200 shadow-2xl shadow-[#22c55e]/30 hover:shadow-[#22c55e]/50 hover:scale-105 flex items-center">
+                Jetzt Prozess-Review vereinbaren
+                <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+            </button>
+        </div>
+
+        <!-- Dashboard Mockup -->
+        <div class="max-w-5xl mx-auto">
+            <div class="relative">
+                <div class="absolute inset-0 bg-gradient-to-r from-[#22c55e] to-[#16a34a] rounded-2xl blur-3xl opacity-20"></div>
+                <div class="relative bg-white rounded-2xl shadow-2xl p-8 border border-gray-200">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                            <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                            <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                        </div>
+                        <div class="text-sm text-gray-500 font-mono">autoazav.de/dashboard</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg p-8">
+                        <div class="flex items-center justify-center space-x-4 mb-6">
+                            <div class="w-16 h-16 bg-[#22c55e] rounded-full flex items-center justify-center">
+                                <i data-lucide="check" class="w-8 h-8 text-white"></i>
+                            </div>
+                            <div class="text-left">
+                                <div class="text-3xl font-bold text-[#0f172a]">Audit-Status</div>
+                                <div class="text-5xl font-extrabold text-[#22c55e]">100% Ready</div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="bg-white rounded-lg p-4 shadow-sm">
+                                <div class="text-sm text-gray-600 mb-1">Dokumente</div>
+                                <div class="text-2xl font-bold text-[#0f172a]">247</div>
+                                <div class="text-xs text-[#22c55e] flex items-center mt-1">
+                                    <i data-lucide="check-circle" class="w-3 h-3 mr-1"></i>
+                                    Vollständig
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-lg p-4 shadow-sm">
+                                <div class="text-sm text-gray-600 mb-1">Compliance</div>
+                                <div class="text-2xl font-bold text-[#0f172a]">100%</div>
+                                <div class="text-xs text-[#22c55e] flex items-center mt-1">
+                                    <i data-lucide="shield-check" class="w-3 h-3 mr-1"></i>
+                                    Rechtssicher
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-lg p-4 shadow-sm">
+                                <div class="text-sm text-gray-600 mb-1">Kapazitäten freigesetzt</div>
+                                <div class="text-2xl font-bold text-[#0f172a]">85%</div>
+                                <div class="text-xs text-[#22c55e] flex items-center mt-1">
+                                    <i data-lucide="trending-up" class="w-3 h-3 mr-1"></i>
+                                    Effizienz
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Trust Bar -->
+    <section class="bg-[#0f172a] text-white py-4 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-center space-x-8 text-center">
+                <div class="flex items-center space-x-2">
+                    <i data-lucide="shield-check" class="w-5 h-5 text-[#22c55e]"></i>
+                    <span class="text-sm font-semibold">Vollständig DSGVO-konform</span>
+                </div>
+                <div class="hidden sm:block w-px h-6 bg-white/20"></div>
+                <div class="flex items-center space-x-2">
+                    <i data-lucide="check-circle" class="w-5 h-5 text-[#22c55e]"></i>
+                    <span class="text-sm font-semibold">Rechtssicher</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Skalierungs-Hebel -->
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <div class="inline-flex items-center px-4 py-2 bg-[#22c55e]/10 border border-[#22c55e]/30 rounded-full mb-6">
+                <i data-lucide="trending-up" class="w-4 h-4 text-[#22c55e] mr-2"></i>
+                <span class="text-sm font-semibold text-[#22c55e]">Der Skalierungs-Hebel</span>
+            </div>
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-[#0f172a]">
+                Wachstum ohne <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#22c55e] to-[#16a34a]">Personalwachstum</span>
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Ihr Bildungsträger wächst – Ihre Verwaltungskosten nicht
+            </p>
+        </div>
+
+        <div class="space-y-6">
+            <!-- Large Card - Intelligente Dokumente -->
+
+            <!-- Immer Audit-Ready -->
+            
+        </div>
+    </div>
+</section>
+
+<!-- Pain Points Section -->
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-[#0f172a]">
+                <span class="text-red-600">Bürokratie</span> stoppt <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#22c55e] to-[#16a34a]">Bildung.</span>
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Die größten Herausforderungen für Bildungsträger im AZAV-Kontext
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-gradient-to-br from-red-50 to-red-100 border-2 border-red-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-4">
+                    <i data-lucide="file-stack" class="w-6 h-6 text-white"></i>
+                </div>
+                <h3 class="text-lg font-bold mb-2 text-[#0f172a]">Zettelwirtschaft</h3>
+                <p class="text-gray-700">Ihr arbeitet noch mit Papierakten und un&#xfc;bersichtliche Ordner kosten t&#xe4;glich wertvolle Arbeitszeit</p>
+            </div>
+
+            <div class="bg-gradient-to-br from-red-50 to-red-100 border-2 border-red-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-4">
+                    <i data-lucide="alert-circle" class="w-6 h-6 text-white"></i>
+                </div>
+                <h3 class="text-lg font-bold mb-2 text-[#0f172a]">Menschliche Dokumentationsfehler</h3>
+                <p class="text-gray-700">Ein einziger Fehler beim Audit kann teure Konsequenzen haben</p>
+            </div>
+
+            <div class="bg-gradient-to-br from-red-50 to-red-100 border-2 border-red-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-4">
+                    <i data-lucide="clock" class="w-6 h-6 text-white"></i>
+                </div>
+                <h3 class="text-lg font-bold mb-2 text-[#0f172a]">Zeitfresser Nachweisverwaltung</h3>
+                <p class="text-gray-700">Manuelle Nachweise für jeden Teilnehmer stehlen Stunden, die für Coaching fehlen</p>
+            </div>
+
+            <div class="bg-gradient-to-br from-red-50 to-red-100 border-2 border-red-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-4">
+                    <i data-lucide="alert-triangle" class="w-6 h-6 text-white"></i>
+                </div>
+                <h3 class="text-lg font-bold mb-2 text-[#0f172a]">Audit-Stress</h3>
+                <p class="text-gray-700">Pr&#xfc;fungen bedeuten tage- oder sogar wochenlange Vorbereitung und schlaflose N&#xe4;chte </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Solution Section (Bento Grid) -->
+<section id="product" class="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <div class="inline-flex items-center px-4 py-2 bg-[#22c55e]/10 border border-[#22c55e]/30 rounded-full mb-6">
+                <i data-lucide="zap" class="w-4 h-4 text-[#22c55e] mr-2"></i>
+                <span class="text-sm font-semibold text-[#22c55e]">Automatisierte Infrastruktur für Wachstum</span>
+            </div>
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-[#0f172a]">
+                Automatisierung trifft <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#22c55e] to-[#16a34a]">Intelligenz</span>
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                KI-gestützte Automatisierungs-Workflows für Träger
+            </p>
+        </div>
+
+        <div class="space-y-6">
+            <!-- Large Card - Intelligente Dokumente -->
+            <div class="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow border-2 border-[#22c55e]/20 text-center">
+                <div class="w-16 h-16 bg-gradient-to-br from-[#22c55e] to-[#16a34a] rounded-xl flex items-center justify-center mb-6 mx-auto">
+                    <i data-lucide="sparkles" class="w-8 h-8 text-white"></i>
+                </div>
+                <div class="mb-3 inline-block px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">Feature</div>
+                <h3 class="text-2xl font-bold mb-4 text-[#0f172a]">KI-gestützte Workflows</h3>
+                <div class="mb-3 inline-block px-3 py-1 bg-purple-100 text-purple-800 text-xs font-semibold rounded-full">Advantage</div>
+                <p class="text-gray-600 mb-6 text-lg font-semibold">
+                    Dokumente werden in Echtzeit fehlerfrei erstellt und archiviert.
+                </p>
+                <div class="mb-3 inline-block px-3 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded-full">Benefit</div>
+                <p class="text-gray-800 mb-6 text-lg font-bold">Absolute Ruhe vor dem nächsten Audit und volle Konzentration auf Ihre Kunden und Ihr Unternehmen.</p>
+                <div class="space-y-3 max-w-2xl mx-auto">
+                    <div class="flex items-start space-x-3">
+                        <i data-lucide="check" class="w-5 h-5 text-[#22c55e] mt-0.5 flex-shrink-0"></i>
+                        <span class="text-gray-700">Automatische Protokollerstellung aus Anwesenheitsdaten</span>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <i data-lucide="check" class="w-5 h-5 text-[#22c55e] mt-0.5 flex-shrink-0"></i>
+                        <span class="text-gray-700">Maßnahme-Verträge mit intelligenter Vorausfüllung</span>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <i data-lucide="check" class="w-5 h-5 text-[#22c55e] mt-0.5 flex-shrink-0"></i>
+                        <span class="text-gray-700">Rechtskonforme Textbausteine & Templates</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Doku-Check -->
+
+            <!-- Audit-Ready -->
+            <div class="bg-gradient-to-br from-[#22c55e] to-[#16a34a] rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow text-white text-center">
+                <div class="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center mb-4 mx-auto">
+                    <i data-lucide="file-check-2" class="w-7 h-7 text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Audit-Ready</h3>
+                <p class="text-white/90 mb-4">
+                    Alle Unterlagen mit 1 Klick bereit für den Prüfer. Export in Sekunden.
+                </p>
+                <div class="flex items-center justify-center text-sm font-semibold">
+                    <i data-lucide="zap" class="w-4 h-4 mr-2"></i>
+                    Sofort einsatzbereit
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits Section -->
+<section id="benefits" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-[#0f172a]">
+                Messbare <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#22c55e] to-[#16a34a]">Vorteile</span>
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Was AutoAZAV für Ihr Unternehmen bedeutet
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Wirtschaftlichkeit -->
+            <div class="text-center">
+                <div class="w-20 h-20 mx-auto bg-gradient-to-br from-[#22c55e] to-[#16a34a] rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-[#22c55e]/30">
+                    <i data-lucide="trending-up" class="w-10 h-10 text-white"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-[#0f172a]">Wirtschaftlichkeit</h3>
+                <p class="text-gray-600 mb-6">
+                    Mehr Teilnehmer betreuen bei weniger Admin-Kosten. Reduzieren Sie Verwaltungsaufwand um bis zu 85%.
+                </p>
+                <div class="bg-gray-50 rounded-lg p-4 inline-block">
+                    <div class="text-3xl font-bold text-[#22c55e]">€12.000+</div>
+                    <div class="text-sm text-gray-600">Jährliche Einsparungen</div>
+                </div>
+            </div>
+
+            <!-- Qualität -->
+            <div class="text-center">
+                <div class="w-20 h-20 mx-auto bg-gradient-to-br from-[#0f172a] to-[#1e293b] rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                    <i data-lucide="star" class="w-10 h-10 text-[#22c55e]"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-[#0f172a]">Qualität</h3>
+                <p class="text-gray-600 mb-6">
+                    Standardisierte Texte & Null-Fehler-Quote. KI-geprüfte Dokumente garantieren höchste Qualität.
+                </p>
+                <div class="bg-gray-50 rounded-lg p-4 inline-block">
+                    <div class="text-3xl font-bold text-[#22c55e]">0</div>
+                    <div class="text-sm text-gray-600">Compliance-Fehler</div>
+                </div>
+            </div>
+
+            <!-- Freiheit -->
+            <div class="text-center">
+                <div class="w-20 h-20 mx-auto bg-gradient-to-br from-[#22c55e] to-[#16a34a] rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-[#22c55e]/30">
+                    <i data-lucide="heart" class="w-10 h-10 text-white"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-[#0f172a]">Kapazitäten freisetzen</h3>
+                <p class="text-gray-600 mb-6">
+                    Coaches können wieder coachen. Statt Papierkram zu erledigen, konzentrieren Sie sich auf Menschen.
+                </p>
+                <div class="bg-gray-50 rounded-lg p-4 inline-block">
+                    <div class="text-3xl font-bold text-[#22c55e]">20h</div>
+                    <div class="text-sm text-gray-600">Pro Woche freigesetzt</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Audit Guarantee Section -->
+<section class="py-20 bg-gradient-to-br from-[#0f172a] to-[#1e293b]">
+    <div class="max-w-4xl mx-auto px-6">
+        <div class="bg-white rounded-2xl p-8 md:p-12 shadow-2xl border-4 border-[#22c55e]">
+            <div class="text-center">
+                <div class="w-20 h-20 mx-auto bg-[#22c55e] rounded-full flex items-center justify-center mb-6">
+                    <i data-lucide="shield-check" class="w-10 h-10 text-white"></i>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-[#0f172a]">
+                    Prüfen Sie Ihr Skalierungspotenzial
+                </h2>
+                <p class="text-xl text-gray-700 leading-relaxed mb-8">
+                    Im kostenlosen Analysegespräch zeigen wir Ihnen exakt, wie viele Stunden Verwaltung wir bei Ihrer nächsten Gruppenmaßnahme einsparen können – und wie Ihr Träger ohne zusätzliche Personalkosten wachsen kann.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-[#22c55e] mb-2">100%</div>
+                        <div class="text-sm text-gray-600">Skalierbarkeit</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-[#22c55e] mb-2">0</div>
+                        <div class="text-sm text-gray-600">Zusätzliches Personal</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-[#22c55e] mb-2">85%</div>
+                        <div class="text-sm text-gray-600">Weniger Verwaltungszeit</div>
+                    </div>
+                </div>
+                <button class="bg-[#22c55e] hover:bg-[#16a34a] text-white font-bold px-10 py-5 rounded-xl transition-all duration-200 shadow-lg shadow-[#22c55e]/30 hover:shadow-[#22c55e]/50 hover:scale-105 text-lg inline-flex items-center">
+                    Skalierungs-Check vereinbaren
+                    <i data-lucide="calendar" class="w-6 h-6 ml-3"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section id="team" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-[#0f172a]">
+                Das <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#22c55e] to-[#16a34a]">Team</span>
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-4">
+                Wir vereinen Tech-Exzellenz mit tiefer Prozessberatung
+            </p>
+            <p class="text-lg text-gray-500 italic">
+                Expertise aus KI, Design und Bildungsmanagement
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Daniel -->
+            <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8 text-center hover:shadow-xl transition-shadow">
+                <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#22c55e] to-[#16a34a] flex items-center justify-center text-white text-4xl font-bold">
+                    D
+                </div>
+                <h3 class="text-2xl font-bold mb-2 text-[#0f172a]">Daniel</h3>
+                <div class="text-[#22c55e] font-semibold mb-4">AI & Architecture</div>
+                <p class="text-gray-600 mb-4">
+                    Machine Learning Engineer mit Fokus auf NLP und Dokumenten-Automatisierung. 8+ Jahre Erfahrung in KI-gestützten Enterprise-Lösungen.
+                </p>
+                <div class="flex items-center justify-center space-x-2 text-sm text-gray-500">
+                    <i data-lucide="brain" class="w-4 h-4"></i>
+                    <span>Deep Learning Specialist</span>
+                </div>
+            </div>
+
+            <!-- Finn -->
+            <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8 text-center hover:shadow-xl transition-shadow">
+                <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#0f172a] to-[#1e293b] flex items-center justify-center text-white text-4xl font-bold">
+                    F
+                </div>
+                <h3 class="text-2xl font-bold mb-2 text-[#0f172a]">Finn</h3>
+                <div class="text-[#22c55e] font-semibold mb-4">UX & Integration</div>
+                <p class="text-gray-600 mb-4">
+                    Product Designer & Frontend-Architekt. Spezialisiert auf intuitive Interfaces für komplexe Workflow-Management-Systeme.
+                </p>
+                <div class="flex items-center justify-center space-x-2 text-sm text-gray-500">
+                    <i data-lucide="layout" class="w-4 h-4"></i>
+                    <span>User Experience Expert</span>
+                </div>
+            </div>
+
+            <!-- Andrej Martens -->
+            <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8 text-center hover:shadow-xl transition-shadow">
+                <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#22c55e] to-[#16a34a] flex items-center justify-center text-white text-4xl font-bold">
+                    A
+                </div>
+                <h3 class="text-2xl font-bold mb-2 text-[#0f172a]">Andrej Martens</h3>
+                <div class="text-[#22c55e] font-semibold mb-4">Business & Coaching</div>
+                <p class="text-gray-600 mb-4">Langj&#xe4;hrige Erfahrung im Bereich Coaching. Der &#xdc;bersetzter f&#xfc;r Gesch&#xe4;ftsf&#xfc;hrer, Qualit&#xe4;tsmanager und Coaches/ Berater</p>
+                <div class="flex items-center justify-center space-x-2 text-sm text-gray-500">
+                    <i data-lucide="workflow" class="w-4 h-4"></i>
+                    <span>Business Consultant</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA Section -->
+<section class="py-20 bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] text-white relative overflow-hidden">
+    <!-- Background decorative elements -->
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-10 right-10 w-64 h-64 border-2 border-[#22c55e] rounded-full"></div>
+        <div class="absolute bottom-10 left-10 w-96 h-96 border-2 border-white rounded-full"></div>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">
+            Bereit für automatisierte Dokumentation<br />
+            und das entspannteste Audit <span class="text-[#22c55e]">ihres Lebens</span>?
+        </h2>
+        <p class="text-xl mb-12 opacity-90">
+            Starten Sie jetzt und erleben Sie, wie einfach AZAV-Dokumentation sein kann
+        </p>
+        
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-12 border border-white/20">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="text-center">
+                    <div class="text-3xl font-bold mb-2">✓ Kostenlose Demo</div>
+                    <div class="text-white/80 text-sm">Live-Einblick in alle Features</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold mb-2">✓ Persönliche Beratung</div>
+                    <div class="text-white/80 text-sm">Maßgeschneidert für Ihre Prozesse</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold mb-2">✓ Schneller Start</div>
+                    <div class="text-white/80 text-sm">Innerhalb von 48 Stunden</div>
+                </div>
+            </div>
+        </div>
+        
+        <button class="bg-[#22c55e] hover:bg-[#16a34a] text-white font-bold px-12 py-5 rounded-xl transition-all duration-200 shadow-2xl shadow-[#22c55e]/30 hover:shadow-[#22c55e]/50 hover:scale-105 text-lg flex items-center mx-auto">
+            Kostenlose Potenzial-Analyse anfragen
+            <i data-lucide="calendar" class="w-6 h-6 ml-3"></i>
+        </button>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-[#0f172a] text-white py-16 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div>
+                <div class="flex items-center space-x-3 mb-4">
+                    <div class="bg-gradient-to-r from-[#0a0f1e] to-[#0f172a] px-6 py-3 rounded-xl flex items-center space-x-3 border border-white/10">
+                        <!-- Green Triangle Logo -->
+                        <img src="../assets/images/Gemini_Generated_Image_xdm7tvxdm7tvxdm7-removebg-preview-1770057793768.png" 
+                             alt="AutoAZAV Triangle" 
+                             class="h-6 w-auto object-contain brightness-110"
+                             style="filter: drop-shadow(0 0 8px rgba(34, 197, 94, 0.4));" />
+                        <!-- Text Logo -->
+                        <span class="text-xl font-extrabold text-white tracking-tight">
+                            Auto<span class="text-[#22c55e]">AZAV</span>
+                        </span>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-6 max-w-md">
+                    KI-gestützte AZAV-Dokumentation für Bildungsträger. Automatisieren Sie Ihre Prozesse und konzentrieren Sie sich auf das Wesentliche: Bildung.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://www.linkedin.com/company/106188200/admin/dashboard/" class="w-10 h-10 bg-white/10 hover:bg-[#22c55e] rounded-lg flex items-center justify-center transition-colors">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-white/10 hover:bg-[#22c55e] rounded-lg flex items-center justify-center transition-colors">
+                        <i data-lucide="twitter" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-white/10 hover:bg-[#22c55e] rounded-lg flex items-center justify-center transition-colors">
+                        <i data-lucide="mail" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2026 AutoAZAV. Alle Rechte vorbehalten.</p>
+            <div class="flex space-x-6 text-sm text-gray-400">
+                <a href="#" class="hover:text-[#22c55e] transition-colors">Datenschutz</a>
+                <a href="https://admination.de/imprint" class="hover:text-[#22c55e] transition-colors">Impressum</a>
+                <a href="#" class="hover:text-[#22c55e] transition-colors">AGB</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        // Initialize Lucide icons
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        let mobileMenuOpen = false;
+        
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenuOpen = !mobileMenuOpen;
+                console.log('Mobile menu toggled:', mobileMenuOpen);
+            });
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for animations
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+
+        // CTA button interactions
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', (e) => {
+                if (button.textContent.includes('Erstgespräch') || 
+                    button.textContent.includes('Prozess-Review') || 
+                    button.textContent.includes('Termin')) {
+                    console.log('CTA clicked:', button.textContent);
+                    // Here you would typically integrate with a scheduling tool like Calendly
+                    alert('Demo-Buchung: In der Produktionsversion würde hier eine Calendly/Booking-Integration erfolgen.');
+                }
+            });
+        });
+
+        // Add parallax effect to hero background
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroSection = document.querySelector('section');
+            if (heroSection) {
+                const parallax = scrolled * 0.5;
+                heroSection.style.transform = `translateY(${parallax}px)`;
+            }
+        });
+
+        // Reload Lucide icons after dynamic content changes
+        setTimeout(() => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        }, 100);
+    </script>
+</body>
+</html>
