@@ -6,6 +6,7 @@
     <title>AutoAZAV - Vom Dokumentations-Stress zur Audit-Routine</title>
     <meta name="description" content="KI-gestützte AZAV-Dokumentation für Bildungsträger. Automatisieren Sie Ihre AZAV-Prozesse von der Anwesenheitsliste bis zum fertigen Audit. Rechtssicher, fehlerfrei und in Minuten statt Stunden." />
     <link rel="stylesheet" href="../css/main.css" />
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/lucide@0.294.0/dist/umd/lucide.min.js"></script>
     <script type="application/ld+json">
     {
@@ -45,7 +46,7 @@
                 </div>
             </div>
             <div class="hidden md:flex items-center space-x-8">
-                <button class="bg-[#22c55e] hover:bg-[#16a34a] text-white font-semibold px-6 py-2.5 rounded-lg transition-all duration-200 shadow-lg shadow-[#22c55e]/30 hover:shadow-[#22c55e]/50 hover:scale-105 flex items-center">Analysegespräch buchen</button>
+                <a href="#booking" class="bg-[#22c55e] hover:bg-[#16a34a] text-white font-semibold px-6 py-2.5 rounded-lg transition-all duration-200 shadow-lg shadow-[#22c55e]/30 hover:shadow-[#22c55e]/50 hover:scale-105 flex items-center">Analysegespräch buchen</a>
             </div>
             <button class="md:hidden p-2 text-gray-700" id="mobile-menu-btn">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -81,10 +82,11 @@
         </p>
         
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <button class="bg-[#22c55e] hover:bg-[#16a34a] text-white font-bold px-8 py-4 rounded-lg transition-all duration-200 shadow-2xl shadow-[#22c55e]/30 hover:shadow-[#22c55e]/50 hover:scale-105 flex items-center">
+            <button type="button" id="hero-calendly-cta" class="bg-[#22c55e] hover:bg-[#16a34a] text-white font-bold px-8 py-4 rounded-lg transition-all duration-200 shadow-2xl shadow-[#22c55e]/30 hover:shadow-[#22c55e]/50 hover:scale-105 flex items-center">
                 Jetzt Prozess-Review vereinbaren
                 <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
             </button>
+
         </div>
 
         <!-- Dashboard Mockup -->
@@ -361,7 +363,7 @@
 </section>
 
 <!-- Audit Guarantee Section -->
-<section class="py-20 bg-gradient-to-br from-[#0f172a] to-[#1e293b]">
+<section id="booking" class="py-20 bg-gradient-to-br from-[#0f172a] to-[#1e293b]">
     <div class="max-w-4xl mx-auto px-6">
         <div class="bg-white rounded-2xl p-8 md:p-12 shadow-2xl border-4 border-[#22c55e]">
             <div class="text-center">
@@ -388,10 +390,9 @@
                         <div class="text-sm text-gray-600">Weniger Verwaltungszeit</div>
                     </div>
                 </div>
-                <button class="bg-[#22c55e] hover:bg-[#16a34a] text-white font-bold px-10 py-5 rounded-xl transition-all duration-200 shadow-lg shadow-[#22c55e]/30 hover:shadow-[#22c55e]/50 hover:scale-105 text-lg inline-flex items-center">
-                    Skalierungs-Check vereinbaren
-                    <i data-lucide="calendar" class="w-6 h-6 ml-3"></i>
-                </button>
+                <!-- Calendly Inline-Widget Beginn -->
+                <div class="calendly-inline-widget rounded-xl overflow-hidden" data-url="https://calendly.com/azav_consulting/ikigai-karriere-check" style="min-width:320px;height:700px;"></div>
+                <!-- Calendly Inline-Widget Ende -->
             </div>
         </div>
     </div>
@@ -418,10 +419,11 @@
                 <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#22c55e] to-[#16a34a] flex items-center justify-center text-white text-4xl font-bold">
                     D
                 </div>
-                <h3 class="text-2xl font-bold mb-2 text-[#0f172a]">Daniel</h3>
-                <div class="text-[#22c55e] font-semibold mb-4">AI & Architecture</div>
+                <h3 class="text-2xl font-bold mb-2 text-[#0f172a]">Daniel Schellhorn</h3>
+                <div class="text-[#22c55e] font-semibold mb-4">AI & Data Architecture</div>
                 <p class="text-gray-600 mb-4">
-                    Machine Learning Engineer mit Fokus auf NLP und Dokumenten-Automatisierung. 8+ Jahre Erfahrung in KI-gestützten Enterprise-Lösungen.
+                    AI Scientist mit Fokus auf datensichere KI-Modelle und Dokumenten-Automatisierung.<br />
+                    Experte für DSGVO-konforme Prozesse.
                 </p>
                 <div class="flex items-center justify-center space-x-2 text-sm text-gray-500">
                     <i data-lucide="brain" class="w-4 h-4"></i>
@@ -434,10 +436,10 @@
                 <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#0f172a] to-[#1e293b] flex items-center justify-center text-white text-4xl font-bold">
                     F
                 </div>
-                <h3 class="text-2xl font-bold mb-2 text-[#0f172a]">Finn</h3>
-                <div class="text-[#22c55e] font-semibold mb-4">UX & Integration</div>
+                <h3 class="text-2xl font-bold mb-2 text-[#0f172a]">Finn Dunkel</h3>
+                <div class="text-[#22c55e] font-semibold mb-4">Engineering & UX</div>
                 <p class="text-gray-600 mb-4">
-                    Product Designer & Frontend-Architekt. Spezialisiert auf intuitive Interfaces für komplexe Workflow-Management-Systeme.
+                    Product Designer und Full-Stack Entwickler. Spezialisiert auf intuitive Interfaces für komplexe Workflow-Management-Systeme.
                 </p>
                 <div class="flex items-center justify-center space-x-2 text-sm text-gray-500">
                     <i data-lucide="layout" class="w-4 h-4"></i>
@@ -451,8 +453,11 @@
                     A
                 </div>
                 <h3 class="text-2xl font-bold mb-2 text-[#0f172a]">Andrej Martens</h3>
-                <div class="text-[#22c55e] font-semibold mb-4">Business & Coaching</div>
-                <p class="text-gray-600 mb-4">Langj&#xe4;hrige Erfahrung im Bereich Coaching. Der &#xdc;bersetzter f&#xfc;r Gesch&#xe4;ftsf&#xfc;hrer, Qualit&#xe4;tsmanager und Coaches/ Berater</p>
+                <div class="text-[#22c55e] font-semibold mb-4">Product & Consulting</div>
+                <p class="text-gray-600 mb-4">
+                    Experte für die Bildungsbranche und AZAV-Prozesse.<br />
+                    Skalierung durch schlanke, automatisierte Prozessgestaltung.
+                </p>
                 <div class="flex items-center justify-center space-x-2 text-sm text-gray-500">
                     <i data-lucide="workflow" class="w-4 h-4"></i>
                     <span>Business Consultant</span>
@@ -496,10 +501,10 @@
             </div>
         </div>
         
-        <button class="bg-[#22c55e] hover:bg-[#16a34a] text-white font-bold px-12 py-5 rounded-xl transition-all duration-200 shadow-2xl shadow-[#22c55e]/30 hover:shadow-[#22c55e]/50 hover:scale-105 text-lg flex items-center mx-auto">
+        <a href="#booking" class="bg-[#22c55e] hover:bg-[#16a34a] text-white font-bold px-12 py-5 rounded-xl transition-all duration-200 shadow-2xl shadow-[#22c55e]/30 hover:shadow-[#22c55e]/50 hover:scale-105 text-lg flex items-center mx-auto">
             Kostenlose Potenzial-Analyse anfragen
             <i data-lucide="calendar" class="w-6 h-6 ml-3"></i>
-        </button>
+        </a>
     </div>
 </section>
 
@@ -549,7 +554,22 @@
     </div>
 </footer>
 
+    <!-- Calendly Inline-Widget Beginn -->
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <!-- Calendly Inline-Widget Ende -->
+
     <script>
+        var CALENDLY_URL = 'https://calendly.com/azav_consulting/ikigai-karriere-check';
+
+        function openCalendlyPopup() {
+            if (typeof Calendly !== 'undefined') {
+                Calendly.initPopupWidget({ url: CALENDLY_URL });
+                return;
+            }
+
+            setTimeout(openCalendlyPopup, 100);
+        }
+
         // Initialize Lucide icons
         if (typeof lucide !== 'undefined') {
             lucide.createIcons();
@@ -563,6 +583,14 @@
             mobileMenuBtn.addEventListener('click', () => {
                 mobileMenuOpen = !mobileMenuOpen;
                 console.log('Mobile menu toggled:', mobileMenuOpen);
+            });
+        }
+
+        var heroCalendlyCta = document.getElementById('hero-calendly-cta');
+        if (heroCalendlyCta) {
+            heroCalendlyCta.addEventListener('click', function (e) {
+                e.preventDefault();
+                openCalendlyPopup();
             });
         }
 
@@ -601,19 +629,6 @@
             section.style.transform = 'translateY(20px)';
             section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(section);
-        });
-
-        // CTA button interactions
-        document.querySelectorAll('button').forEach(button => {
-            button.addEventListener('click', (e) => {
-                if (button.textContent.includes('Erstgespräch') || 
-                    button.textContent.includes('Prozess-Review') || 
-                    button.textContent.includes('Termin')) {
-                    console.log('CTA clicked:', button.textContent);
-                    // Here you would typically integrate with a scheduling tool like Calendly
-                    alert('Demo-Buchung: In der Produktionsversion würde hier eine Calendly/Booking-Integration erfolgen.');
-                }
-            });
         });
 
         // Add parallax effect to hero background
