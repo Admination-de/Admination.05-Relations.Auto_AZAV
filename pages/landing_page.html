@@ -6,7 +6,6 @@
     <title>AutoAZAV - Vom Dokumentations-Stress zur Audit-Routine</title>
     <meta name="description" content="KI-gestützte AZAV-Dokumentation für Bildungsträger. Automatisieren Sie Ihre AZAV-Prozesse von der Anwesenheitsliste bis zum fertigen Audit. Rechtssicher, fehlerfrei und in Minuten statt Stunden." />
     <link rel="stylesheet" href="../css/main.css" />
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/lucide@0.294.0/dist/umd/lucide.min.js"></script>
     <script type="application/ld+json">
     {
@@ -390,8 +389,13 @@
                         <div class="text-sm text-gray-600">Weniger Verwaltungszeit</div>
                     </div>
                 </div>
-                <!-- Calendly Inline-Widget Beginn -->
-                <div class="calendly-inline-widget rounded-xl overflow-hidden" data-url="https://calendly.com/azav_consulting/ikigai-karriere-check" style="min-width:320px;height:700px;"></div>
+                <!-- Calendly Inline-Widget (Click-to-Load gemäß § 25 TDDDG) -->
+                <div id="calendly-inline-container" class="rounded-xl overflow-hidden">
+                    <div id="calendly-consent-placeholder" class="bg-gray-50 border border-gray-200 rounded-xl p-8 text-center flex flex-col items-center justify-center gap-4" style="min-height:300px;">
+                        <p class="text-sm text-gray-600 max-w-xl">Zum Buchen eines Termins wird das Widget von Calendly LLC (USA) geladen. Dabei werden Daten (z.&nbsp;B. Ihre IP-Adresse) an Calendly übermittelt und Cookies gesetzt. Details in unserer <a href="/datenschutz" class="underline text-[#0f172a]">Datenschutzerklärung</a>.</p>
+                        <button type="button" id="calendly-consent-btn" class="bg-[#22c55e] hover:bg-[#16a34a] text-white font-bold px-6 py-3 rounded-lg transition-colors">Terminbuchung laden</button>
+                    </div>
+                </div>
                 <!-- Calendly Inline-Widget Ende -->
             </div>
         </div>
@@ -554,20 +558,46 @@
     </div>
 </footer>
 
-    <!-- Calendly Inline-Widget Beginn -->
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-    <!-- Calendly Inline-Widget Ende -->
-
     <script>
         var CALENDLY_URL = 'https://calendly.com/azav_consulting/ikigai-karriere-check';
 
-        function openCalendlyPopup() {
-            if (typeof Calendly !== 'undefined') {
-                Calendly.initPopupWidget({ url: CALENDLY_URL });
-                return;
-            }
+        // Calendly wird erst nach aktiver Nutzeraktion geladen (§ 25 TDDDG).
+        var calendlyLoading = null;
+        function loadCalendly() {
+            if (calendlyLoading) return calendlyLoading;
+            calendlyLoading = new Promise(function (resolve) {
+                var css = document.createElement('link');
+                css.rel = 'stylesheet';
+                css.href = 'https://assets.calendly.com/assets/external/widget.css';
+                document.head.appendChild(css);
+                var js = document.createElement('script');
+                js.src = 'https://assets.calendly.com/assets/external/widget.js';
+                js.onload = resolve;
+                document.head.appendChild(js);
+            });
+            return calendlyLoading;
+        }
 
-            setTimeout(openCalendlyPopup, 100);
+        function openCalendlyPopup() {
+            loadCalendly().then(function () {
+                Calendly.initPopupWidget({ url: CALENDLY_URL });
+            });
+        }
+
+        var calendlyConsentBtn = document.getElementById('calendly-consent-btn');
+        if (calendlyConsentBtn) {
+            calendlyConsentBtn.addEventListener('click', function () {
+                loadCalendly().then(function () {
+                    var placeholder = document.getElementById('calendly-consent-placeholder');
+                    var container = document.getElementById('calendly-inline-container');
+                    if (placeholder) placeholder.style.display = 'none';
+                    var widget = document.createElement('div');
+                    widget.style.minWidth = '320px';
+                    widget.style.height = '700px';
+                    container.appendChild(widget);
+                    Calendly.initInlineWidget({ url: CALENDLY_URL, parentElement: widget });
+                });
+            });
         }
 
         // Initialize Lucide icons
