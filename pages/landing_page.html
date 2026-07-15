@@ -59,7 +59,7 @@
 <!-- Hero Section -->
 <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] pt-20">
     <!-- Geometric background patterns -->
-    <div class="absolute inset-0 opacity-10">
+    <div id="hero-bg" class="absolute inset-0 opacity-10">
         <div class="absolute top-20 left-10 w-64 h-64 border-2 border-white rounded-full"></div>
         <div class="absolute bottom-20 right-10 w-96 h-96 border-2 border-[#22c55e] rounded-full"></div>
         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-white/20"></div>
@@ -664,10 +664,10 @@
         // Add parallax effect to hero background
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
-            const heroSection = document.querySelector('section');
-            if (heroSection) {
+            const heroBg = document.getElementById('hero-bg');
+            if (heroBg) {
                 const parallax = scrolled * 0.5;
-                heroSection.style.transform = `translateY(${parallax}px)`;
+                heroBg.style.transform = `translateY(${parallax}px)`;
             }
         });
 
