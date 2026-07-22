@@ -8,7 +8,7 @@
   /* Primary Colors */
   --color-primary: #1E40AF; /* blue-800 - Professional blue for brand trust and navigation */
   --color-secondary: #3B82F6; /* blue-500 - Supporting blue for section headers and secondary elements */
-  --color-accent: #10B981; /* emerald-500 - Conversion green exclusively for CTAs and success states */
+  --color-accent: #3B82F6; /* emerald-500 - Conversion green exclusively for CTAs and success states */
   
   /* Background Colors */
   --color-background: #FFFFFF; /* white - Pure white for maximum content clarity */
@@ -19,13 +19,13 @@
   --color-text-secondary: #6B7280; /* gray-500 - Medium gray for supporting text without distraction */
   
   /* Status Colors */
-  --color-success: #059669; /* emerald-600 - Darker green for form confirmations and positive metrics */
+  --color-success: #2563EB; /* emerald-600 - Darker green for form confirmations and positive metrics */
   --color-warning: #F59E0B; /* amber-500 - Amber for scarcity elements and trial countdown timers */
   --color-error: #DC2626; /* red-600 - Clear red for form validation only */
   
   /* Border Colors */
   --color-border: #E5E7EB; /* gray-200 - For form inputs only */
-  --color-border-active: #10B981; /* emerald-500 - For active form states */
+  --color-border-active: #3B82F6; /* emerald-500 - For active form states */
 }
 
 @layer base {
@@ -50,7 +50,7 @@
   
   .btn-primary:hover {
     transform: translateY(-1px);
-    box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.2);
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.2);
   }
   
   .card-testimonial {

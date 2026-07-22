@@ -5,16 +5,16 @@ module.exports = {
       colors: {
         primary: "#1E40AF", // blue-800 - Professional blue for brand trust and navigation
         secondary: "#3B82F6", // blue-500 - Supporting blue for section headers and secondary elements
-        accent: "#10B981", // emerald-500 - Conversion green exclusively for CTAs and success states
+        accent: "#3B82F6", // emerald-500 - Conversion green exclusively for CTAs and success states
         background: "#FFFFFF", // white - Pure white for maximum content clarity
         surface: "#F8FAFC", // slate-50 - Subtle gray for section separation without visual noise
         "text-primary": "#111827", // gray-900 - High contrast black for instant readability
         "text-secondary": "#6B7280", // gray-500 - Medium gray for supporting text without distraction
-        success: "#059669", // emerald-600 - Darker green for form confirmations and positive metrics
+        success: "#2563EB", // emerald-600 - Darker green for form confirmations and positive metrics
         warning: "#F59E0B", // amber-500 - Amber for scarcity elements and trial countdown timers
         error: "#DC2626", // red-600 - Clear red for form validation only
         "border-default": "#E5E7EB", // gray-200 - For form inputs only
-        "border-active": "#10B981", // emerald-500 - For active form states
+        "border-active": "#3B82F6", // emerald-500 - For active form states
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

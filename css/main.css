@@ -1035,17 +1035,17 @@ h1, h2, h3, h4, h5, h6 {
   border-top-width: 1px;
 }
 
-.border-\[\#22c55e\]{
+.border-\[\#3b82f6\]{
   --tw-border-opacity: 1;
-  border-color: rgb(34 197 94 / var(--tw-border-opacity, 1));
+  border-color: rgb(59 130 246 / var(--tw-border-opacity, 1));
 }
 
-.border-\[\#22c55e\]\/20{
-  border-color: rgb(34 197 94 / 0.2);
+.border-\[\#3b82f6\]\/20{
+  border-color: rgb(59 130 246 / 0.2);
 }
 
-.border-\[\#22c55e\]\/30{
-  border-color: rgb(34 197 94 / 0.3);
+.border-\[\#3b82f6\]\/30{
+  border-color: rgb(59 130 246 / 0.3);
 }
 
 .border-gray-200{
@@ -1081,13 +1081,13 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgb(15 23 42 / var(--tw-bg-opacity, 1));
 }
 
-.bg-\[\#22c55e\]{
+.bg-\[\#3b82f6\]{
   --tw-bg-opacity: 1;
-  background-color: rgb(34 197 94 / var(--tw-bg-opacity, 1));
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity, 1));
 }
 
-.bg-\[\#22c55e\]\/10{
-  background-color: rgb(34 197 94 / 0.1);
+.bg-\[\#3b82f6\]\/10{
+  background-color: rgb(59 130 246 / 0.1);
 }
 
 .bg-background{
@@ -1107,12 +1107,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .bg-green-100{
   --tw-bg-opacity: 1;
-  background-color: rgb(220 252 231 / var(--tw-bg-opacity, 1));
+  background-color: rgb(219 234 254 / var(--tw-bg-opacity, 1));
 }
 
 .bg-green-500{
   --tw-bg-opacity: 1;
-  background-color: rgb(34 197 94 / var(--tw-bg-opacity, 1));
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity, 1));
 }
 
 .bg-purple-100{
@@ -1172,9 +1172,9 @@ h1, h2, h3, h4, h5, h6 {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.from-\[\#22c55e\]{
-  --tw-gradient-from: #22c55e var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(34 197 94 / 0) var(--tw-gradient-to-position);
+.from-\[\#3b82f6\]{
+  --tw-gradient-from: #3b82f6 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(59 130 246 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
@@ -1199,8 +1199,8 @@ h1, h2, h3, h4, h5, h6 {
   --tw-gradient-to: #0f172a var(--tw-gradient-to-position);
 }
 
-.to-\[\#16a34a\]{
-  --tw-gradient-to: #16a34a var(--tw-gradient-to-position);
+.to-\[\#2563eb\]{
+  --tw-gradient-to: #2563eb var(--tw-gradient-to-position);
 }
 
 .to-\[\#1e293b\]{
@@ -1408,14 +1408,14 @@ h1, h2, h3, h4, h5, h6 {
   color: rgb(15 23 42 / var(--tw-text-opacity, 1));
 }
 
-.text-\[\#22c55e\]{
+.text-\[\#3b82f6\]{
   --tw-text-opacity: 1;
-  color: rgb(34 197 94 / var(--tw-text-opacity, 1));
+  color: rgb(59 130 246 / var(--tw-text-opacity, 1));
 }
 
 .text-accent{
   --tw-text-opacity: 1;
-  color: rgb(16 185 129 / var(--tw-text-opacity, 1));
+  color: rgb(59 130 246 / var(--tw-text-opacity, 1));
 }
 
 .text-blue-800{
@@ -1455,7 +1455,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .text-green-800{
   --tw-text-opacity: 1;
-  color: rgb(22 101 52 / var(--tw-text-opacity, 1));
+  color: rgb(30 64 175 / var(--tw-text-opacity, 1));
 }
 
 .text-purple-800{
@@ -1535,8 +1535,8 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.shadow-\[\#22c55e\]\/30{
-  --tw-shadow-color: rgb(34 197 94 / 0.3);
+.shadow-\[\#3b82f6\]\/30{
+  --tw-shadow-color: rgb(59 130 246 / 0.3);
   --tw-shadow: var(--tw-shadow-colored);
 }
 
@@ -1606,7 +1606,7 @@ h1, h2, h3, h4, h5, h6 {
   /* blue-800 - Professional blue for brand trust and navigation */
   --color-secondary: #3B82F6;
   /* blue-500 - Supporting blue for section headers and secondary elements */
-  --color-accent: #10B981;
+  --color-accent: #3B82F6;
   /* emerald-500 - Conversion green exclusively for CTAs and success states */
   /* Background Colors */
   --color-background: #FFFFFF;
@@ -1619,7 +1619,7 @@ h1, h2, h3, h4, h5, h6 {
   --color-text-secondary: #6B7280;
   /* gray-500 - Medium gray for supporting text without distraction */
   /* Status Colors */
-  --color-success: #059669;
+  --color-success: #2563EB;
   /* emerald-600 - Darker green for form confirmations and positive metrics */
   --color-warning: #F59E0B;
   /* amber-500 - Amber for scarcity elements and trial countdown timers */
@@ -1628,7 +1628,7 @@ h1, h2, h3, h4, h5, h6 {
   /* Border Colors */
   --color-border: #E5E7EB;
   /* gray-200 - For form inputs only */
-  --color-border-active: #10B981;
+  --color-border-active: #3B82F6;
   /* emerald-500 - For active form states */
 }
 
@@ -1638,19 +1638,19 @@ h1, h2, h3, h4, h5, h6 {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.hover\:bg-\[\#16a34a\]:hover{
+.hover\:bg-\[\#2563eb\]:hover{
   --tw-bg-opacity: 1;
-  background-color: rgb(22 163 74 / var(--tw-bg-opacity, 1));
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity, 1));
 }
 
-.hover\:bg-\[\#22c55e\]:hover{
+.hover\:bg-\[\#3b82f6\]:hover{
   --tw-bg-opacity: 1;
-  background-color: rgb(34 197 94 / var(--tw-bg-opacity, 1));
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity, 1));
 }
 
-.hover\:text-\[\#22c55e\]:hover{
+.hover\:text-\[\#3b82f6\]:hover{
   --tw-text-opacity: 1;
-  color: rgb(34 197 94 / var(--tw-text-opacity, 1));
+  color: rgb(59 130 246 / var(--tw-text-opacity, 1));
 }
 
 .hover\:underline:hover{
@@ -1675,8 +1675,8 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.hover\:shadow-\[\#22c55e\]\/50:hover{
-  --tw-shadow-color: rgb(34 197 94 / 0.5);
+.hover\:shadow-\[\#3b82f6\]\/50:hover{
+  --tw-shadow-color: rgb(59 130 246 / 0.5);
   --tw-shadow: var(--tw-shadow-colored);
 }
 
